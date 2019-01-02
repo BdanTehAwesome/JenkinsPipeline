@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Maven Compile') {
+            steps {
+                bat 'mvn compile'
+            }
+        }
+        stage('Run Junit Tests') {
+            steps {
+                bat 'mvn test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
