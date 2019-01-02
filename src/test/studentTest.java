@@ -1,8 +1,6 @@
-package test;
+
 
 import static org.junit.Assert.assertEquals;
-
-import main.Student;
 
 /**
  * Created by meudecc on 15/02/2017.

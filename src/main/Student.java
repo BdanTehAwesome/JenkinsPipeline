@@ -1,6 +1,3 @@
-package main ;
-
-
 /**
  * Created by meudecc on 15/02/2017.
  * Edited by B Delaney on 30/12/2018.
