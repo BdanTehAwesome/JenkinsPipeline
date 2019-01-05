@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Maven Compile') {
             steps {
-                bat 'mvn compile'
+                bat '.\mvn compile'
             }
         }
         stage('Run Junit Tests') {
             steps {
-                bat 'mvn test'
+                bat '.\mvn test'
             }
         }
         stage('Deploy') {
