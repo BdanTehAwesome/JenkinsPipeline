@@ -2,9 +2,12 @@ pipeline {
     agent any
 
     stages {
-      	stage ('checkout repository')
-		checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'a8157e19-b483-4828-82dd-8f871d58be4e', url: 'https://github.com/BdanTehAwesome/JenkinsPipeline']]])
-
+      	stage ('checkout repository'){
+      	git branch: 'master',
+   		credentialsId: 'a8157e19-b483-4828-82dd-8f871d58be4e',
+   	 	url: 'ssh://https://github.com/BdanTehAwesome/JenkinsPipeline'
+ 		}
+			
         stage('Maven Compile') {
             steps {
                 bat 'mvn compile'
