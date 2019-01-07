@@ -3,9 +3,11 @@ pipeline {
 
     stages {
       	stage ('checkout repository'){
-      	git branch: 'master',
-   		credentialsId: 'a8157e19-b483-4828-82dd-8f871d58be4e',
-   	 	url: 'ssh://https://github.com/BdanTehAwesome/JenkinsPipeline'
+	   	 	git(
+	     	url: 'https://github.com/BdanTehAwesome/JenkinsPipeline.git',
+	        credentialsId: 'a8157e19-b483-4828-82dd-8f871d58be4e',
+	        branch: "master")
+    )
  		}
 			
         stage('Maven Compile') {
